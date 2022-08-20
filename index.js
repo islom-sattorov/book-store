@@ -98,7 +98,7 @@ btnTop.innerHTML = "to top";
 
 let arrowBtnTop = document.createElement('img');
 btnTop.appendChild(arrowBtnTop);
-arrowBtnTop.setAttribute('src', "/img/Vector-arrow.png");
+arrowBtnTop.setAttribute('src', "./img/Vector-arrow.png");
 arrowBtnTop.className = "arrowBtn";
 arrowBtnTop.style.width = "20px"
 
