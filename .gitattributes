@@ -1,2 +1,1 @@
-dist/* linguist-documentation=SCSS
-dist/* linguist-vendored
+*.dist linguist-documentation=SCSS
