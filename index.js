@@ -152,14 +152,7 @@ function createBookDiv() {
         // Picture
         name.append(pic);
         pic.className = "picBook";
-        if (books[i].author.includes("Гоголь")) {
-            pic.setAttribute("src", "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Frenewthearts.org%2Fwp-content%2Fuploads%2F2014%2F08%2Fnikolai-gogol.jpg&f=1&nofb=1");
-        } else if (books[i].author.includes("Лондон")) {
-            pic.setAttribute("src", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.independent.co.uk%2Fs3fs-public%2Fthumbnails%2Fimage%2F2020%2F02%2F19%2F12%2Fjack-london-2.jpg%3Fwidth%3D982%26height%3D726&f=1&nofb=1");
-        } else if (books[i].author.includes("Драйзер")) {
-            pic.setAttribute("src", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbiografii.net%2Fwp-content%2Fuploads%2F2018%2F11%2F01_SmQ8Xdj.jpg&f=1&nofb=1");
-
-        } else if (books[i].price <= 100) {
+        if (books[i].price <= 100) {
             pic.setAttribute("src", "https://www.incimages.com/uploaded_files/image/1920x1080/getty_587536358_2000133320009280405_395605.jpg");
         } else if (books[i].price > 100 && books[i].price <= 500) {
             pic.setAttribute("src", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcbsnews2.cbsistatic.com%2Fhub%2Fi%2Fr%2F2015%2F12%2F11%2F7f3c9843-adb1-4022-be13-82515641a9fc%2Fthumbnail%2F1200x630%2F5af2e16fd2ecd02f06637db5ca110a43%2Fopen-book.jpg&f=1&nofb=1");
@@ -349,8 +342,6 @@ inputSearch.addEventListener("input", e => {
 
 function itemVision(item) {
     item.style.display = "grid";
-    item.style.gap = "20px";
-    item.style.padding = "10px";
 }
 
 

@@ -155,9 +155,8 @@ label{
 .grid-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4,1fr);
     gap: 40px;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
 }
 
@@ -167,6 +166,8 @@ label{
     background: #fff;
     text-align: center;
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     gap: 20px;
     padding: 10px;
     transition: all 0.2s ease-out;
