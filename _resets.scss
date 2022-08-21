@@ -7,12 +7,12 @@
 $header-bg-color: #8da683;
 $aside-bg-color: #be8f3c;
 
-$font-weights: (
-    "regular": 400,
-    "medium": 500,
-    "bold": 700,
-);
-$text-color: #fff;
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 html{
     font-size: 10px;

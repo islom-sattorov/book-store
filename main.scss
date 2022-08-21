@@ -1,9 +1,5 @@
 @import './resets';
 
-@function weight($weight-name){
-    @return map-get($font-weights , $weight-name);
-}
-
 @mixin flexCenter {
     display: flex;
     align-items: center;
@@ -14,7 +10,6 @@
 .header{
     padding: 30px 0 0 0;
     background: $header-bg-color;
-    font-weight: weight(regular);
 
 
 .flex-header{
