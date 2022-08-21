@@ -52,9 +52,19 @@ inputSearch.setAttribute("placeholder", "search");
 inputContainer.appendChild(inputSearch);
 
 // Button for Search
-let searchBtn = document.createElement('button');
-searchBtn.innerHTML = "Find";
-inputContainer.appendChild(searchBtn);
+let addBookBtn = document.createElement('button');
+addBookBtn.innerHTML = "Add book";
+inputContainer.appendChild(addBookBtn);
+
+addBookBtn.addEventListener('click', () => {
+    if (addBookBtn.innerHTML == "Add book") {
+        mainContainer.style.display = "none";
+        addBookBtn.innerHTML = "Return";
+    } else if (addBookBtn.innerHTML == "Return") {
+        mainContainer.style.display = "block";
+        addBookBtn.innerHTML = "Add book";
+    }
+})
 
 // USD CHECK
 let usdCurrent = document.createElement('span');
