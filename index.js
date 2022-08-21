@@ -14,7 +14,7 @@ globalContainer.className = "container";
 
 // Header Flex
 let headerFlexContainer = document.createElement('div');
-headerFlexContainer.className = "flex__header";
+headerFlexContainer.className = "flex-header";
 globalContainer.appendChild(headerFlexContainer);
 
 // Title for Header
@@ -24,12 +24,12 @@ titleHeader.innerHTML = "Book Store";
 
 // Input Container 
 let inputContainer = document.createElement('div');
-inputContainer.className = "input__container";
+inputContainer.className = "input-container";
 headerFlexContainer.appendChild(inputContainer);
 
 // Checkbox Container
 let checkboxContainer = document.createElement('div');
-checkboxContainer.className = "checkbox__container";
+checkboxContainer.className = "checkbox-container";
 inputContainer.appendChild(checkboxContainer)
 
 // Label for input checkbox
@@ -88,7 +88,7 @@ globalContainer2.className = "container";
 // Flex container
 let mainFlex = document.createElement("div");
 globalContainer2.appendChild(mainFlex);
-mainFlex.className = "main__flex";
+mainFlex.className = "main-flex";
 
 // btn TOP
 let btnTop = document.createElement('button');
@@ -130,7 +130,7 @@ btnTop.addEventListener('click', () => {
 // Grid Container
 let gridContainer = document.createElement("div");
 mainFlex.appendChild(gridContainer);
-gridContainer.className = "grid__container";
+gridContainer.className = "grid-container";
 
 // Book div
 function createBookDiv() {
@@ -201,7 +201,7 @@ createBookDiv();
 // Filter Search
 let filterSearch = document.createElement('aside');
 mainFlex.appendChild(filterSearch);
-filterSearch.className = "aside__filter";
+filterSearch.className = "aside-filter";
 
 // Label for input
 let labelInputRange = document.createElement('label');
@@ -231,7 +231,7 @@ priceRange.addEventListener('input', () => {
 // Form Language Radio BTN
 let formLanguage = document.createElement('form');
 filterSearch.appendChild(formLanguage);
-formLanguage.className = "form__radio";
+formLanguage.className = "form-radio";
 
 let languageLabel1 = document.createElement('label');
 formLanguage.appendChild(languageLabel1)
@@ -267,7 +267,7 @@ languageRadioBtn3.setAttribute("value", "all");
 // Reset Button
 let resetBtn = document.createElement('button');
 formLanguage.appendChild(resetBtn);
-resetBtn.className = "reset__btn"
+resetBtn.className = "reset-btn"
 resetBtn.innerHTML = "Reset"
 
 resetBtn.addEventListener('click', () => {
