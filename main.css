@@ -90,7 +90,7 @@ label {
   align-items: center;
   position: inherit;
 }
-.main .main-flex .btn__top {
+.main-flex .btn__top {
   position: fixed;
   bottom: 50px;
   left: 50px;
@@ -181,7 +181,7 @@ label {
   }
 }
 @media (max-width: 1130px) {
-  .main .main-flex .btn__top {
+  .main-flex .btn__top {
     left: 20px;
   }
 }
@@ -189,7 +189,7 @@ label {
   .main .aside-filter {
     display: none;
   }
-  .main .main-flex .btn__top {
+  .main-flex .btn__top {
     left: 10px;
     padding: 15px;
   }
@@ -201,7 +201,7 @@ label {
     gap: 20px;
     padding: 0 0 10px 0;
   }
-  .main .main-flex .btn__top {
+  .main-flex .btn__top {
     left: 5px;
     padding: 10px;
   }
@@ -230,7 +230,7 @@ label {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
   }
-  .main .main-flex .btn__top {
+  .main-flex .btn__top {
     left: 10px;
     padding: 15px;
   }
