@@ -2,6 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 html {
@@ -199,7 +201,7 @@ label {
 }
 .section .section-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   padding: 50px 0;
   text-align: center;
   font-size: 1.4rem;
