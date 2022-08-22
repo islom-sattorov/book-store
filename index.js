@@ -358,7 +358,7 @@ function itemVision(item) {
 let sectionContainer = document.createElement('section');
 sectionContainer.className = 'section';
 document.body.appendChild(sectionContainer);
-// sectionContainer.style.display = "none";
+sectionContainer.style.display = "none";
 
 let globalContainerSection = document.createElement('div');
 globalContainerSection.className = "container";
@@ -508,11 +508,12 @@ class UI {
         listDelete.appendChild(deleteBookBtn);
         deleteBookBtn.setAttribute("href", "#");
         deleteBookBtn.className = "delete"
-        deleteBookBtn.innerHTML = "X"
+        const x = "x";
+        deleteBookBtn.innerHTML = x;
     }
 
     static deleteBook(target) {
-        target.remove("li");
+        target.remove("");
     }
 
     static clearFields() {
