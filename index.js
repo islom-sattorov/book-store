@@ -364,9 +364,223 @@ let globalContainerSection = document.createElement('div');
 globalContainerSection.className = "container";
 sectionContainer.appendChild(globalContainerSection);
 
-let sectionParagraph = document.createElement('p');
-sectionContainer.innerHTML = "123u912893819083901283912089031";
-globalContainerSection.appendChild(sectionParagraph);
+// Form 
+let bookForm = document.createElement('form');
+bookForm.id = "book-form";
+bookForm.className = "section-book-form";
+globalContainerSection.appendChild(bookForm);
+
+// Form Group
+let formGroup = document.createElement('div');
+formGroup.className = "form-group";
+bookForm.appendChild(formGroup);
+
+// Title
+let titleLabel = document.createElement('label');
+titleLabel.setAttribute("for", "title");
+titleLabel.innerHTML = "Title";
+formGroup.appendChild(titleLabel);
+
+let titleInput = document.createElement('input');
+titleInput.id = "title";
+titleInput.setAttribute("type", "text");
+titleInput.className = "form__control"
+formGroup.appendChild(titleInput);
+
+// Form Group 2
+let formGroup2 = document.createElement('div');
+formGroup2.className = "form-group";
+bookForm.appendChild(formGroup2);
+
+// author
+let authorLabel = document.createElement('label');
+authorLabel.setAttribute("for", "author");
+authorLabel.innerHTML = "Author";
+formGroup2.appendChild(authorLabel);
+
+let authorInput = document.createElement('input');
+authorInput.id = "author";
+authorInput.setAttribute("type", "text");
+authorInput.className = "form__control"
+formGroup2.appendChild(authorInput);
+
+// Form Group 3
+let formGroup3 = document.createElement('div');
+formGroup3.className = "form-group";
+bookForm.appendChild(formGroup3);
+
+// isbn
+let isbnLabel = document.createElement('label');
+isbnLabel.setAttribute("for", "isbn");
+isbnLabel.innerHTML = "isbn#";
+formGroup3.appendChild(isbnLabel);
+
+let isbnInput = document.createElement('input');
+isbnInput.id = "isbn";
+isbnInput.setAttribute("type", "text");
+isbnInput.className = "form__control"
+formGroup3.appendChild(isbnInput);
+
+let submitBtn = document.createElement('input');
+submitBtn.setAttribute("type", "submit");
+submitBtn.setAttribute("value", "Add book");
+submitBtn.className = "submit__btn";
+bookForm.appendChild(submitBtn);
+
+// Grid
+let sectionTable = document.createElement('div');
+sectionTable.className = "section-grid";
+globalContainerSection.appendChild(sectionTable);
+
+let sectionTableTitle = document.createElement('ul');
+sectionTableTitle.className = "grid__title";
+sectionTableTitle.innerHTML = "Title"
+sectionTable.appendChild(sectionTableTitle);
+
+let sectionTableAuthor = document.createElement('ul');
+sectionTableAuthor.className = "grid__title";
+sectionTableAuthor.innerHTML = "Author"
+sectionTable.appendChild(sectionTableAuthor);
+
+let sectionTableIsbn = document.createElement('ul');
+sectionTableIsbn.className = "grid__title";
+sectionTableIsbn.innerHTML = "Isbn"
+sectionTable.appendChild(sectionTableIsbn);
+
+let sectionDelete = document.createElement('ul');
+sectionDelete.className = "grid__title";
+sectionDelete.innerHTML = "Delete";
+sectionTable.appendChild(sectionDelete);
+
+// OOP CLASSES 
+
+// Book Class: Represents a Book
+class Book {
+    constructor(title, author, isbn) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+    }
+}
+
+// UI Class: Handle UI Tasks
+class UI {
+    static displayBooks() {
+        const StoredBooks = [
+            {
+                title: "Book One",
+                author: "Islom",
+                isbn: "32244",
+            },
+            {
+                title: "Book Two",
+                author: "Islom",
+                isbn: "45455",
+            },
+        ];
+
+        const books = StoredBooks;
+
+        books.forEach(book => UI.addBookToList(book));
+    }
+
+    static addBookToList(book) {
+        // Title
+        const listTitle = document.createElement('li');
+        sectionTableTitle.appendChild(listTitle);
+        listTitle.innerHTML = `${book.title}`;
+
+        // Author
+        const listAuthor = document.createElement('li');
+        sectionTableAuthor.appendChild(listAuthor);
+        listAuthor.innerHTML = `${book.author}`;
+
+        // Isbn
+        const listIsbn = document.createElement('li');
+        sectionTableIsbn.appendChild(listIsbn);
+        listIsbn.innerHTML = `${book.isbn}`
+
+        // Delete BTN
+        const listDelete = document.createElement('li');
+        sectionDelete.appendChild(listDelete);
+
+        const deleteBookBtn = document.createElement('a');
+        listDelete.appendChild(deleteBookBtn);
+        deleteBookBtn.setAttribute("href", "#");
+        deleteBookBtn.className = "delete"
+        const x = "x";
+        deleteBookBtn.innerHTML = x;
+    }
+
+    static deleteBook(target) {
+        target.remove("");
+    }
+
+    static clearFields() {
+        titleInput.value = "";
+        authorInput.value = "";
+        isbnInput.value = "";
+    }
+}
+
+// Store Class: Handles Storage
+
+// Event: Display Books
+document.addEventListener('DOMContentLoaded', UI.displayBooks);
+
+// Event: Add a book
+bookForm.addEventListener('submit', (e) => {
+    // Prevent actual submit
+    e.preventDefault();
+
+    // Get Form Values
+    const title = titleInput.value;
+    const author = authorInput.value;
+    const isbn = isbnInput.value;
+
+    // Instatiate book
+    const book = new Book(title, author, isbn);
+
+    // Add Book to UI
+    UI.addBookToList(book);
+
+    // Clear Fields
+    UI.clearFields();
+})
+
+// Event: Remove a Book
+
+sectionTableTitle.addEventListener('click', e => {
+    UI.deleteBook(e.target);
+    e.stopPropagation();
+    console.log(e.target, "Title")
+})
+
+sectionTableAuthor.addEventListener('click', e => {
+    UI.deleteBook(e.target);
+    e.stopPropagation();
+    console.log(e.target, "Author")
+})
+
+sectionTableIsbn.addEventListener('click', e => {
+    UI.deleteBook(e.target);
+    e.stopPropagation();
+    console.log(e.target, "isbn");
+})
+
+sectionDelete.addEventListener('click', e => {
+    UI.deleteBook(e.target);
+    e.stopPropagation();
+    console.log(e.target, "Delete")
+})
+
+
+
+
+
+
+
+// OOP END
 
 
 
@@ -389,11 +603,6 @@ footerLink.setAttribute("href", "https://github.com/islom-sattorov");
 footerLink.className = "footer__link";
 footerLink.innerHTML = "GIT";
 footerParagraph.appendChild(footerLink);
-
-
-
-
-
 
 
 

@@ -2,6 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 html {
@@ -172,6 +174,37 @@ label {
 .main .form-radio .reset-btn {
   text-align: center;
   grid-column: 1/3;
+}
+
+.section {
+  padding: 40px 20px;
+}
+.section label {
+  font-size: 2rem;
+}
+.section .form__control {
+  margin: 10px 0 20px 0;
+  width: 100%;
+  padding: 5px;
+}
+.section .submit__btn {
+  width: 100%;
+  padding: 5px;
+  background: rgb(6, 175, 6);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s all;
+}
+.section .submit__btn:hover {
+  background: rgb(5, 138, 5);
+}
+.section .section-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 50px 0;
+  text-align: center;
+  font-size: 1.4rem;
 }
 
 .footer {
