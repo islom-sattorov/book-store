@@ -358,15 +358,85 @@ function itemVision(item) {
 let sectionContainer = document.createElement('section');
 sectionContainer.className = 'section';
 document.body.appendChild(sectionContainer);
-sectionContainer.style.display = "none";
+// sectionContainer.style.display = "none";
 
 let globalContainerSection = document.createElement('div');
 globalContainerSection.className = "container";
 sectionContainer.appendChild(globalContainerSection);
 
-let sectionParagraph = document.createElement('p');
-sectionContainer.innerHTML = "123u912893819083901283912089031";
-globalContainerSection.appendChild(sectionParagraph);
+// Form 
+let bookForm = document.createElement('form');
+bookForm.id = "book-form";
+bookForm.className = "section-book-form";
+globalContainerSection.appendChild(bookForm);
+
+// Form Group
+let formGroup = document.createElement('div');
+formGroup.className = "form-group";
+bookForm.appendChild(formGroup);
+
+// Title
+let titleLabel = document.createElement('label');
+titleLabel.setAttribute("for", "title");
+titleLabel.innerHTML = "Title";
+formGroup.appendChild(titleLabel);
+
+let titleInput = document.createElement('input');
+titleInput.id = "title";
+titleInput.setAttribute("type", "text");
+titleInput.className = "form__control"
+formGroup.appendChild(titleInput);
+
+// Form Group 2
+let formGroup2 = document.createElement('div');
+formGroup2.className = "form-group";
+bookForm.appendChild(formGroup2);
+
+// author
+let authorLabel = document.createElement('label');
+authorLabel.setAttribute("for", "author");
+authorLabel.innerHTML = "Author";
+formGroup2.appendChild(authorLabel);
+
+let authorInput = document.createElement('input');
+authorInput.id = "author";
+authorInput.setAttribute("type", "text");
+authorInput.className = "form__control"
+formGroup2.appendChild(authorInput);
+
+// Form Group 3
+let formGroup3 = document.createElement('div');
+formGroup3.className = "form-group";
+bookForm.appendChild(formGroup3);
+
+// isbn
+let isbnLabel = document.createElement('label');
+isbnLabel.setAttribute("for", "isbn");
+isbnLabel.innerHTML = "isbn#";
+formGroup3.appendChild(isbnLabel);
+
+let isbnInput = document.createElement('input');
+isbnInput.id = "isbn";
+isbnInput.setAttribute("type", "text");
+isbnInput.className = "form__control"
+formGroup3.appendChild(isbnInput);
+
+let submitBtn = document.createElement('input');
+submitBtn.setAttribute("type", "submit");
+submitBtn.setAttribute("value", "Add book");
+submitBtn.className = "submit__btn";
+bookForm.appendChild(submitBtn);
+
+// Grid
+
+
+
+
+
+
+
+
+
 
 
 
