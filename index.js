@@ -59,9 +59,11 @@ inputContainer.appendChild(addBookBtn);
 addBookBtn.addEventListener('click', () => {
     if (addBookBtn.innerHTML == "Add book") {
         mainContainer.style.display = "none";
+        sectionContainer.style.display = "block";
         addBookBtn.innerHTML = "Return";
     } else if (addBookBtn.innerHTML == "Return") {
         mainContainer.style.display = "block";
+        sectionContainer.style.display = "none"
         addBookBtn.innerHTML = "Add book";
     }
 })
@@ -281,8 +283,6 @@ resetBtn.addEventListener('click', () => {
 
 
 
-
-
 // Search Engine
 let bookDivs = document.querySelectorAll('.book');
 
@@ -354,12 +354,41 @@ function itemVision(item) {
     item.style.display = "grid";
 }
 
+// Section
+let sectionContainer = document.createElement('section');
+sectionContainer.className = 'section';
+document.body.appendChild(sectionContainer);
+sectionContainer.style.display = "none";
+
+let globalContainerSection = document.createElement('div');
+globalContainerSection.className = "container";
+sectionContainer.appendChild(globalContainerSection);
+
+let sectionParagraph = document.createElement('p');
+sectionContainer.innerHTML = "123u912893819083901283912089031";
+globalContainerSection.appendChild(sectionParagraph);
 
 
 
+// Footer 
+let footerContainer = document.createElement('footer');
+footerContainer.className = "footer";
+document.body.appendChild(footerContainer);
 
+let globalContainer3 = document.createElement('div');
+globalContainer3.className = "container";
+footerContainer.appendChild(globalContainer3);
 
+let footerParagraph = document.createElement('p');
+footerParagraph.className = "footer__paragraph";
+footerParagraph.innerHTML = "2022";
+globalContainer3.appendChild(footerParagraph);
 
+let footerLink = document.createElement('a');
+footerLink.setAttribute("href", "https://github.com/islom-sattorov");
+footerLink.className = "footer__link";
+footerLink.innerHTML = "GIT";
+footerParagraph.appendChild(footerLink);
 
 
 
