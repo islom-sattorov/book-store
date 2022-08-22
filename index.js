@@ -428,6 +428,24 @@ submitBtn.className = "submit__btn";
 bookForm.appendChild(submitBtn);
 
 // Grid
+let sectionTable = document.createElement('div');
+sectionTable.className = "section-grid";
+globalContainerSection.appendChild(sectionTable);
+
+let sectionTableTitle = document.createElement('h4');
+sectionTableTitle.className = "grid__title";
+sectionTableTitle.innerHTML = "Title"
+sectionTable.appendChild(sectionTableTitle);
+
+let sectionTableAuthor = document.createElement('h4');
+sectionTableAuthor.className = "grid__title";
+sectionTableAuthor.innerHTML = "Author"
+sectionTable.appendChild(sectionTableAuthor);
+
+let sectionTableIsbn = document.createElement('h4');
+sectionTableIsbn.className = "grid__title";
+sectionTableIsbn.innerHTML = "Isbn"
+sectionTable.appendChild(sectionTableIsbn);
 
 
 

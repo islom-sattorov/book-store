@@ -197,6 +197,13 @@ label {
 .section .submit__btn:hover {
   background: rgb(5, 138, 5);
 }
+.section .section-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 50px 0;
+  text-align: center;
+  font-size: 1.4rem;
+}
 
 .footer {
   background: #000;
